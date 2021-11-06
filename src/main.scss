@@ -1,0 +1,105 @@
+$primary: #000;
+$secondary: #337ff1;
+$white: #fefefe;
+
+body {
+    background-color: lighten($primary, 20%);
+    color: $white;
+    margin: 0;
+}
+
+.markdown-title {
+    background: #171717;
+    border-radius: 4px;
+    width: 40%;
+    margin: 2rem auto !important;
+    padding: 1rem;
+}
+
+.container__editor {
+    height: 200px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 200px;
+}
+
+.container__preview {
+    @extend .container__editor;
+    background-color: $white;
+    height: 200px !important;
+    overflow: auto;
+}
+
+img {
+    width: 100%;
+}
+
+pre {
+    background-color: lighten($primary, 20%);
+    color: $white;
+}
+
+li {
+    text-indent: 10px;
+}
+
+li, blockquote p {
+    color: $secondary;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 10px !important;
+    }
+
+    .container__editor, .container__preview {
+        width: 80%;
+        height: 250px !important;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 991px) {
+    h4 {
+        font-size: 32px;
+    }
+
+    .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flexbox;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        margin: 10px auto;
+    }
+
+    .container__editor {
+        height: 70vh !important;
+        margin: 10px !important;
+        width: 40vw;
+    }
+    .container__preview {
+        height: 70vh !important;
+        margin: 10px !important;
+        width: 40vw;
+        overflow: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    h4 {
+        font-size: 40px;
+    }
+}
